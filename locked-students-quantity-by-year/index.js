@@ -35,6 +35,7 @@ async function fetchBtiStudents(page = 1) {
 
     const response = await ufrnClient.get('/', {
       params: {
+        'order-desc': 'ano-ingresso',
         'id-curso': REQUEST_CONFIG.BTI_ID,
         limit: REQUEST_CONFIG.STUDENTS_PER_PAGE,
         offset,
@@ -111,8 +112,7 @@ function getLockedStudentsAmountByYearAndPeriod(
       )
     : {};
 
-  // 1, 2, 3, 4, 5, 6, 40, 39, 38, 37
-  const students = await fetchBtiStudents(37);
+  const students = await fetchBtiStudents();
 
   const studentsSituationChanges = [];
 
@@ -133,8 +133,6 @@ function getLockedStudentsAmountByYearAndPeriod(
       )
     );
 
-  console.log({ studentsWithLockedSituation });
-
   const lockedStudentsAmountByYearAndPeriod =
     getLockedStudentsAmountByYearAndPeriod(
       studentsWithLockedSituation,
@@ -142,7 +140,7 @@ function getLockedStudentsAmountByYearAndPeriod(
     );
 
   console.log(
-    'lockedStudentsAmountByYearAndPeriod: ',
+    'lockedStudentsAmountByYearAndPeriod:',
     lockedStudentsAmountByYearAndPeriod
   );
 
