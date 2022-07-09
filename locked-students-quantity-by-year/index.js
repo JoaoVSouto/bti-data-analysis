@@ -6,10 +6,11 @@ const path = require('path');
 const axios = require('axios');
 
 const LOCKED_SITUATION_ID = 5;
+const CANCELED_SITUATION_ID = 6;
 const LOCKED_STUDENTS_AMOUNT_BY_SEMESTER_PATH = path.join(
   __dirname,
   'data',
-  'locked-students-amount-by-semester.json'
+  'canceled-students-amount-by-semester.json'
 );
 
 const ufrnClient = axios.create({
@@ -86,7 +87,7 @@ function getLockedStudentsAmountByYearAndPeriod(
 
   studentsWithLockedSituation.forEach(student => {
     const lockedSituations = student.filter(
-      situationChange => situationChange.situationId === LOCKED_SITUATION_ID
+      situationChange => situationChange.situationId === CANCELED_SITUATION_ID
     );
 
     lockedSituations.forEach(lockedSituation => {
@@ -112,7 +113,7 @@ function getLockedStudentsAmountByYearAndPeriod(
       )
     : {};
 
-  const students = await fetchBtiStudents();
+  const students = await fetchBtiStudents(42);
 
   const studentsSituationChanges = [];
 
@@ -129,7 +130,7 @@ function getLockedStudentsAmountByYearAndPeriod(
     .filter(Boolean)
     .filter(studentSituationChanges =>
       studentSituationChanges.some(
-        situationChange => situationChange.situationId === LOCKED_SITUATION_ID
+        situationChange => situationChange.situationId === CANCELED_SITUATION_ID
       )
     );
 

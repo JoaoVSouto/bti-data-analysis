@@ -1,0 +1,78 @@
+{
+  "2013.1": {
+    "allEmphasis": 93,
+    "specificEmphasis": 78
+  },
+  "2013.2": {
+    "allEmphasis": 92,
+    "specificEmphasis": 79
+  },
+  "2014.1": {
+    "allEmphasis": 146,
+    "specificEmphasis": 130
+  },
+  "2014.2": {
+    "allEmphasis": 131,
+    "specificEmphasis": 122
+  },
+  "2015.1": {
+    "allEmphasis": 164,
+    "specificEmphasis": 146
+  },
+  "2015.2": {
+    "allEmphasis": 159,
+    "specificEmphasis": 143
+  },
+  "2016.1": {
+    "allEmphasis": 176,
+    "specificEmphasis": 163
+  },
+  "2016.2": {
+    "allEmphasis": 173,
+    "specificEmphasis": 161
+  },
+  "2017.1": {
+    "allEmphasis": 174,
+    "specificEmphasis": 160
+  },
+  "2017.2": {
+    "allEmphasis": 169,
+    "specificEmphasis": 157
+  },
+  "2018.1": {
+    "allEmphasis": 187,
+    "specificEmphasis": 168
+  },
+  "2018.2": {
+    "allEmphasis": 170,
+    "specificEmphasis": 154
+  },
+  "2019.1": {
+    "allEmphasis": 203,
+    "specificEmphasis": 186
+  },
+  "2019.2": {
+    "allEmphasis": 184,
+    "specificEmphasis": 171
+  },
+  "2020.1": {
+    "allEmphasis": 204,
+    "specificEmphasis": 192
+  },
+  "2020.2": {
+    "allEmphasis": 183,
+    "specificEmphasis": 171
+  },
+  "2021.1": {
+    "allEmphasis": 185,
+    "specificEmphasis": 172
+  },
+  "2021.2": {
+    "allEmphasis": 156,
+    "specificEmphasis": 145
+  },
+  "2022.1": {
+    "allEmphasis": 183,
+    "specificEmphasis": 170
+  }
+}
